@@ -16,6 +16,9 @@
 </head>
 
 <body>
+    <jumbotron>
+        <h1>My Photos</h1>
+    </jumbotron>
     <div ng-controller="picController as pic">
         <div ng-style="myStyle">
             is angular working {{1===1}}
@@ -25,8 +28,8 @@
             
             <br>
 
-            <img ng-repeat="picture in pic.pictures" ng-src="{{picture.file}}" />
-
+            <img ng-repeat="picture in pic.pictures" ng-click="pic.showCaption(picture)" ng-src="{{picture.file}}" />
+            <p>{{pic.caption}}</p>
         </div>
         <div>
             <input type="button" value="set color" ng-click="myStyle={'color':'lightgray'}">
