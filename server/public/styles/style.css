@@ -7,3 +7,31 @@ img {
     padding-top: 20px;
 
 }
+
+.jumbotron {
+background-color: rgb(18, 231, 247);
+height: 200px;
+}
+
+.jumbotron h1 {
+    text-align: center; 
+    vertical-align: middle;
+    font-family: 'Raleway', sans-serif;
+    color: whitesmoke;
+}
+
+body {
+
+    font-family: 'Raleway', sans-serif;
+}
+
+.image { 
+   position: relative; 
+   width: 100%; /* for IE 6 */
+}
+
+h3 { 
+   position: absolute; 
+   top: 200px; 
+   width: 100%; 
+}

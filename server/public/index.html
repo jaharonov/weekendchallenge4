@@ -7,37 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Weekend Challenge 4</title>
-    <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="styles/style.css">
     <script type="text/javascript" src="vendors/angular.min.js"></script>
     <script type="text/javascript" src="scripts/client.js"></script>
-    
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 </head>
 
 <body>
-    <jumbotron>
+    <div class="jumbotron">
         <h1>My Photos</h1>
-    </jumbotron>
-    <div ng-controller="picController as pic">
-        <div ng-style="myStyle">
-            is angular working {{1===1}}
-            <input type="text" ng-model="pic.name">
-            <input type="text" ng-model="pic.file">
-            {{pic.message}}
-            
-            <br>
-
-            <img ng-repeat="picture in pic.pictures" ng-click="pic.showCaption(picture)" ng-src="{{picture.file}}" />
-            <p>{{pic.caption}}</p>
-        </div>
-        <div>
-            <input type="button" value="set color" ng-click="myStyle={'color':'lightgray'}">
-            <input type="button" value="set background" ng-click="myStyle={'background-color':'teal'}">
-            <input type="button" value="clear" ng-click="myStyle={}">
-
-
-        </div>
+    </div>
+    <div class="image" ng-controller="picController as pic">
+        
+        <img ng-repeat="picture in pic.pictures" ng-click="pic.showCaption(picture)" ng-show="picture.caption" ng-src="{{picture.file}}"/>
+            <h3>{{pic.caption}}</h3>
+        
     </div>
 </body>
 
