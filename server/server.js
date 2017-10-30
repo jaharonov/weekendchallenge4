@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 var port = process.env.PORT || 5000;
-var poolModule = require('../modules/pool.js');
+var poolModule = require('./modules/pool.js');
 var pool = poolModule;
 // Serve up static files
 app.use(express.static('server/public'));
