@@ -3,11 +3,11 @@ var myApp = angular.module('myApp', []);
 myApp.controller('picController', function () {
     var pic = this;
     
-    
-    pic.message = 'show pics!';
+    // pic.show = false;
+   
     pic.display = function (picture) {
         
-    var picture = pictures.push({ name: pic.name, file: pic.file, caption: pic.caption, show: pic.show});
+    var picture = pictures.push({ name: pic.name, file: pic.file, caption: pic.caption, show: false});
         
     }
 
@@ -20,8 +20,9 @@ myApp.controller('picController', function () {
     { name: 'image6', file: '/images/with_kelley.jpg', caption: "Being a dork with Kelley.",show: false }];
 
     pic.showCaption = function (picture) {
-       
-     pic.caption = picture.caption;
+       console.log(picture);
+       console.log(picture.show);
+     picture.show = !picture.show;
         
     }
     
