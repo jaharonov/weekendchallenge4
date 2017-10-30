@@ -14,6 +14,7 @@ height: 200px;
 }
 
 .jumbotron h1 {
+    font-size: 100px;
     text-align: center; 
     vertical-align: middle;
     font-family: 'Raleway', sans-serif;
@@ -23,15 +24,27 @@ height: 200px;
 body {
 
     font-family: 'Raleway', sans-serif;
+    align-content: center
 }
 
-.image { 
+figure.image { 
    position: relative; 
-   width: 100%; /* for IE 6 */
+   width: 100%; 
+   display: inline-block;
+   vertical-align: middle;
+   align-content: center
 }
 
-h3 { 
+.caption { 
    position: absolute; 
    top: 200px; 
    width: 100%; 
+   display: inline-block;
+   vertical-align: left;
+}
+
+.glyphicon {
+    display: inline-block; 
+    
+
 }

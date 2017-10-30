@@ -19,11 +19,21 @@
     <div class="jumbotron">
         <h1>My Photos</h1>
     </div>
-    <div class="image" ng-controller="picController as pic">
-        
-        <img ng-repeat="picture in pic.pictures" ng-click="pic.showCaption(picture)" ng-show="picture.caption" ng-src="{{picture.file}}"/>
-            <h3>{{pic.caption}}</h3>
-        
+    <div ng-controller="picController as pic">
+        <div class ng-repeat="picture in pic.pictures"="row">
+            <div class="col-md-4">
+                <div class="thumbnail">
+         <figure class="image">
+        <img class="img img-responsive center-block" ng-click="pic.showCaption(picture)" ng-src="{{picture.file}}"/>
+            <figcaption class="caption" ng-show="picture.caption">{{pic.caption}}</figcaption><br>
+            <a href="#" class="btn btn-info btn-sm" ng-click="count = count + 1">
+                <span class="glyphicon glyphicon-heart"></span> {{count}}
+            </a>
+    
+        </figure>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 
